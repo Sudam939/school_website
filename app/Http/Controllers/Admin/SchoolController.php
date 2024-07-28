@@ -34,6 +34,19 @@ class SchoolController extends Controller
     public function store(Request $request)
     {
         //save data in databse
+        $request->validate([
+            'name' => 'required|max:255',
+            'slogan' => 'required|max:255',
+            'email' => 'required|max:255|email',
+            'phone' => 'required|digits:10',
+            'tel' => 'nullable|digits:7',
+            'office_hour' => 'required|max:255',
+            'logo' => 'required|file|max:1024',
+        ]);
+
+        
+
+        return $request->all();
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\Admin\SchoolController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('/admin/school', SchoolController::class)->names('school');
+    Route::resource('/admin/notice', NoticeController::class)->names('notice');
 });
 
 

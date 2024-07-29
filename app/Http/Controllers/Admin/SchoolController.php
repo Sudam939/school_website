@@ -44,9 +44,27 @@ class SchoolController extends Controller
             'logo' => 'required|file|max:1024',
         ]);
 
-        
+        $school = new School();
+        $school->name = $request->name;
+        $school->slogan = $request->slogan;
+        $school->address = $request->address;
+        $school->email = $request->email;
+        $school->phone= $request->phone;
+        $school->tel = $request->tel;
+        $school->office_hour = $request->office;
+        $school->map = $request->map;
+        $school->facebook = $request->facebook;
+        $school->youtube = $request->youtube;
 
-        return $request->all();
+        if($request->hasFile('logo')){
+            $file = $request->logo;
+            $fileName = time(). "." . $file->getClientOriginalExtension();
+            $file->move('images', $fileName);
+            $school->logo = 'images/'.  $fileName;
+        }
+
+        $school->save();
+        return redirect()->back();
     }
 
     /**

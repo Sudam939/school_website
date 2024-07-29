@@ -1,6 +1,6 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-        <a href="index.html">
+        <a href="{{route('dashboard')}}">
              <span class="logo-name">CODEIT SCHOOL</span>
         </a>
     </div>
@@ -8,7 +8,7 @@
 
         <li class="menu-header">Main</li>
         <li class="dropdown active">
-            <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+            <a href="{{route('dashboard')}}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
 
 
@@ -18,6 +18,10 @@
             <ul class="dropdown-menu">
                 <li><a class="nav-link" href="{{route('school.index')}}">School Setup</a></li>
             </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="{{route('notice.index')}}" class="nav-link"><i data-feather="monitor"></i><span>Notice</span></a>
         </li>
 
     </ul>

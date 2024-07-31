@@ -24,5 +24,14 @@
             <a href="{{route('notice.index')}}" class="nav-link"><i data-feather="monitor"></i><span>Notice</span></a>
         </li>
 
+        <li class="dropdown">
+            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                    data-feather="settings"></i><span>Member</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{route('membercategory.index')}}">Member Category</a></li>
+                <li><a class="nav-link" href="{{route('member.index')}}">Member</a></li>
+            </ul>
+        </li>
+
     </ul>
 </aside>

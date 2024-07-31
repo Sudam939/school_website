@@ -3,10 +3,8 @@
         <div class="container">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5>School</h5>
-                    @if (empty($school))
-                        <a href="{{ route('school.create') }}" class="btn btn-primary"><i data-feather="plus"></i> add</a>
-                    @endif
+                    <h5>Member Category</h5>
+                    <a href="{{ route('membercategory.create') }}" class="btn btn-primary"><i data-feather="plus"></i> add new</a>
                 </div>
 
                 <div class="card-body">
@@ -15,26 +13,20 @@
                             <thead>
                                 <tr>
                                     <th>SN</th>
-                                    <th>Logo</th>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
+                                    <th>Title</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (!empty($school))
+                                @foreach ($membercategories as $index => $membercategory)
                                     <tr>
-                                        <td>1</td>
-                                        <td>logo</td>
-                                        <td>CODEIT School</td>
-                                        <td>Dharan-1</td>
-                                        <td>65476547657</td>
+                                        <td>{{ ++$index }}</td>
+                                        <td>{{$membercategory->title}}</td>
                                         <td>
-                                            edit delete
+                                            <a href="{{ route('membercategory.edit', $membercategory->id) }}"><i data-feather="edit"></i></a>
                                         </td>
                                     </tr>
-                                @endif
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

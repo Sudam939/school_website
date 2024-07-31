@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\MemberCategoryController;
+use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\Admin\SchoolController;
 use App\Http\Controllers\ProfileController;
@@ -23,6 +25,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('/admin/school', SchoolController::class)->names('school');
     Route::resource('/admin/notice', NoticeController::class)->names('notice');
+    Route::resource('/admin/membercategory', MemberCategoryController::class)->names('membercategory');
+    Route::resource('/admin/member', MemberController::class)->names('member');
 });
 
 

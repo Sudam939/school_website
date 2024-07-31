@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --primary: #447c9d;
+    --secondary: #dbf1ff;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.slogan {
+    font-family: "Dancing Script", cursive;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.primary-bg {
+    background-color: var(--primary);
+    color: white;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+}
+
+.btn{
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}

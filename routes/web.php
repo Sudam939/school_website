@@ -4,13 +4,12 @@ use App\Http\Controllers\Admin\MemberCategoryController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\Admin\SchoolController;
+use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/',[PageController::class,'home'])->name('home');
 
 
 

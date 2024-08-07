@@ -10,6 +10,11 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.container{
+    width: 86%;
+    margin: auto;
+}
+
 .slogan {
     font-family: "Dancing Script", cursive;
 }
@@ -57,7 +62,7 @@ h6 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .btn{
